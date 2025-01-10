@@ -19,6 +19,14 @@ let setError=function(element,message){
  inputControl.classList.remove('success');
   
 }
+let setSuccess=function(element){
+    let inputControl=element.parentElement;
+    let error_display=inputControl.querySelector('.error');
+    error_display.innerHTML='';
+    inputControl.classList.remove('error');
+    inputControl.classList.add('success');
+     
+   }
 let validationInputs=function(){
     let userValid=username.value;
     let emailValid=email.value;
@@ -28,34 +36,34 @@ let validationInputs=function(){
     if(userValid==''){
         setError(username,'نام کاربری نباید خالی باشد')
     }else{
-
+        setSuccess(username)
     }
 
 
     if(emailValid==''){
         setError(email,'ایمیل نباید خالی باشد')
     }else if(!isValidEmail(emailValid)){
-
+        setError(email,'فرمت ایمیل نامعتبر است')
     }else{
-
+        setSuccess(email)
     }
 
 
     if(passValid==''){
         setError(password,'رمز عبور نباید خالی باشد')
     }else if(passValid.length<8){
-
+        setError(password,'رمز عبور نباید کمتر از 8 کاراکتر باشد')
     }else{
-
+        setSuccess(password)
     }
 
 
     if(pass2Valid==''){
         setError(password2,'تکرار رمز عبور نباید خالی باشد')
     }else if(pass2Valid!==passValid){
-    
+        setError(password2,'  تکرار رمز عبور شما با رمز عبور یکسان نیست ')
     }else{
-
+        setSuccess(password2)
     }
 
 }
