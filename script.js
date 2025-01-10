@@ -15,6 +15,42 @@ let validationInputs=function(){
     let emailValid=email.value;
     let passValid=password.value;
     let pass2Valid=password2.value;
-   
+    
+    if(userValid==''){
 
+    }else{
+
+    }
+
+
+    if(emailValid==''){
+
+    }else if(!isValidEmail(emailValid)){
+
+    }else{
+
+    }
+
+
+    if(passValid==''){
+
+    }else if(passValid.length<8){
+
+    }else{
+
+    }
+
+
+    if(pass2Valid==''){
+
+    }else if(pass2Valid!==passValid){
+    
+    }else{
+
+    }
+
+}
+let isValidEmail=function(emailValid){
+ const pattern_email=/^[^]+@[^]+\.[a-z]{2,3}$/;
+ return pattern_email.test(String(emailValid).toLocaleLowerCase());
 }
