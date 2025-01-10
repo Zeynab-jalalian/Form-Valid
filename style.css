@@ -21,4 +21,29 @@ body{
 }
 #form h1{
     text-align: center;
+    color: #242424;
+}
+#form .input_control{
+    display: flex;
+    flex-direction: column;
+    margin: 10px 0;
+}
+#form .input_control input{
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    font-size: 12px;
+    outline: none;
+    padding: 10px;
+}
+#form button{
+    width: 100%;
+    background: #00f;
+    border-radius: 5px;
+    border: none;
+    padding: 10px;
+    color: white;
+    margin-top: 10px;
+}
+#form .input_control label{
+    font-size: 12px;
 }
