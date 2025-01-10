@@ -10,6 +10,12 @@ form.addEventListener('submit',function(event){
     validationInputs();
 
 })
+
+let setError=function(element,message){
+ let inputControl=element.parentElement;
+
+ 
+}
 let validationInputs=function(){
     let userValid=username.value;
     let emailValid=email.value;
@@ -17,14 +23,14 @@ let validationInputs=function(){
     let pass2Valid=password2.value;
     
     if(userValid==''){
-
+        setError(username,'نام کاربری نباید خالی باشد')
     }else{
 
     }
 
 
     if(emailValid==''){
-
+        setError(email,'ایمیل نباید خالی باشد')
     }else if(!isValidEmail(emailValid)){
 
     }else{
@@ -33,7 +39,7 @@ let validationInputs=function(){
 
 
     if(passValid==''){
-
+        setError(password,'رمز عبور نباید خالی باشد')
     }else if(passValid.length<8){
 
     }else{
@@ -42,7 +48,7 @@ let validationInputs=function(){
 
 
     if(pass2Valid==''){
-
+        setError(password2,'تکرار رمز عبور نباید خالی باشد')
     }else if(pass2Valid!==passValid){
     
     }else{
