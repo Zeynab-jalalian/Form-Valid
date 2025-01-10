@@ -13,8 +13,11 @@ form.addEventListener('submit',function(event){
 
 let setError=function(element,message){
  let inputControl=element.parentElement;
-
- 
+ let error_display=inputControl.querySelector('.error');
+ error_display.innerHTML=message;
+ inputControl.classList.add('error');
+ inputControl.classList.remove('success');
+  
 }
 let validationInputs=function(){
     let userValid=username.value;
