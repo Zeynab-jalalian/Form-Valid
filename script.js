@@ -28,10 +28,10 @@ let setSuccess=function(element){
      
    }
 let validationInputs=function(){
-    let userValid=username.value;
-    let emailValid=email.value;
-    let passValid=password.value;
-    let pass2Valid=password2.value;
+    let userValid=username.value.trim();
+    let emailValid=email.value.trim();
+    let passValid=password.value.trim();
+    let pass2Valid=password2.value.trim();
     
     if(userValid==''){
         setError(username,'نام کاربری نباید خالی باشد')
